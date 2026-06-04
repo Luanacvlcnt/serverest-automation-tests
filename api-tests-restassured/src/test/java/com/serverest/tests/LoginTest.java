@@ -1,8 +1,6 @@
 package com.serverest.tests;
 
 import com.github.javafaker.Faker;
-import io.qameta.allure.*;
-import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
@@ -16,8 +14,6 @@ import java.util.Locale;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-@Epic("Authentication Management")
-@Feature("Login API")
 public class LoginTest {
 
     private static Faker faker;
@@ -29,16 +25,12 @@ public class LoginTest {
 
         RestAssured.filters(
                 new RequestLoggingFilter(),
-                new ResponseLoggingFilter(),
-                new AllureRestAssured()
+                new ResponseLoggingFilter()
         );
     }
 
     @Test
-    @Story("Admin Login")
-    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("TC001: Successful authentication with a dynamically registered admin user")
-    @Description("Registers a new admin user on the fly and uses their credentials to authenticate successfully.")
     public void testSuccessfulLoginWithValidAdminCredentials() {
         String fakeName = faker.name().fullName();
         String fakeEmail = faker.internet().emailAddress();
@@ -79,8 +71,6 @@ public class LoginTest {
     }
 
     @Test
-    @Story("Standard User Login")
-    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("TC002: Successful authentication with a dynamically registered non-admin user")
     public void testSuccessfulLoginWithValidNonAdminCredentials() {
         String fakeName = faker.name().fullName();
@@ -122,8 +112,6 @@ public class LoginTest {
     }
 
     @Test
-    @Story("Security Validation")
-    @Severity(SeverityLevel.NORMAL)
     @DisplayName("TC003: Authentication blocked when using an unregistered email")
     public void testLoginBlockedForUnregisteredEmail() {
         String unregisteredEmail = faker.internet().emailAddress();
@@ -147,8 +135,6 @@ public class LoginTest {
     }
 
     @Test
-    @Story("Input Validation")
-    @Severity(SeverityLevel.MINOR)
     @DisplayName("TC004: Authentication rejected when required fields are completely empty")
     public void testLoginRejectedWithEmptyFields() {
         String loginPayload = """

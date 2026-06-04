@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Entra na pasta do seu projeto (ajuste se a pasta for outra)
     defaults:
       run:
         working-directory: ./api-tests-restassured
