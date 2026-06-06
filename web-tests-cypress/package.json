@@ -1,0 +1,25 @@
+{
+  "name": "serverest-automation-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luanacvlcnt/serverest-automation-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Luanacvlcnt/serverest-automation-tests/issues"
+  },
+  "homepage": "https://github.com/Luanacvlcnt/serverest-automation-tests#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "cypress": "^15.16.0"
+  }
+}
