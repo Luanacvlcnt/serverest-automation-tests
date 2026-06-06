@@ -1,0 +1,59 @@
+# API Test Automation - Challenge 1 Júlio de Lima
+
+This repository contains the suite of automated tests developed for Júlio de Lima's QA challenge. The central objective is to guarantee the quality of the *Serverest* API through fast, resilient, and automated tests, where Michael Bolton (the author we studied) says that humans are in charge, and technology is our helper.
+
+---
+
+## Repository Structure
+
+* **`/api-tests-restassured`**: API test automation module focused on authentication and business rules.
+
+---
+
+## Module: API Tests (Serverest)
+
+In this module, I created a test suite focused on the *Serverest* API. The goal was to build an "inspector robot" that automatically validates the login flow.
+
+### Why did I create this?
+Testing logins manually is a slow process and prone to human error. I automated this process so that, with each change, the computer validates everything in milliseconds, ensuring that the system continues to function as expected.
+
+### Technologies I used:
+* **Java 17** & **Maven**
+* **RestAssured** for request automation.
+* **JUnit 5** as the test engine.
+* **JavaFaker** to generate intelligent data (dynamic users that change with each test, avoiding duplication errors).
+* **GitHub Actions** for CI/CD (the project tests itself in the cloud with each change).
+
+### How to run locally:
+1. Navigate to the folder: `cd api-tests-restassured`
+2. Run the tests via terminal: `mvn test`
+3. Or, in your IntelliJ, click the "Play" button of the `LoginTest` class.
+
+---
+
+## Cloud Automation (CI/CD)
+
+I configured **GitHub Actions** to ensure the reliability of the challenge. Every time I upload code to GitHub, a cloud server is automatically started, runs the tests, and validates the code quality with a "Green Check" (✅).
+
+You can track the execution history in the **Actions** tab of the repository.
+
+--
+
+## About the Challenge
+
+This project was developed applying the concepts of **Rapid Software Testing (RST)**. The focus was not just on creating code, but on building a quality strategy that prioritizes speed, observability, and intelligence in testing.
+
+* **Theoretical Basis:** [AI and Rapid Software Testing](https://developsense.com/blog/2025/07/ai-and-rapid-software-testing)
+* **Technical Anchor:** [Rapid Software Testing for AI Systems](https://arxiv.org/abs/2507.09089)
+
+---
+
+### IMPORTANT:
+
+* **Resilience:** The use of `JavaFaker` makes the tests independent, ensuring they never fail due to outdated data.
+
+* **Confidence:** `GitHub Actions` proves that automation runs in any environment.
+
+* **Simplicity:** The project focuses on what matters: stability and speed, without unnecessary complexity.
+
+---
