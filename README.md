@@ -35,6 +35,10 @@ serverest-automation-tests/
 
 ---
 
+## 🗂️ Repository of Manual Tests
+
+**General Repository(TestCases, Test Scenarios, User Story & Acceptance Criteria):** https://drive.google.com/drive/folders/179EQRrQii1RAoKANBUHX-XPLJwvLtynN
+
 ## 🎯 The Challenge
 
 The mentorship challenge had two parts:
